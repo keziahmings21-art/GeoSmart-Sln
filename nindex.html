@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoSmart Solutions</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  <link rel="icon" href="favicon.ico" type="assets/img/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="assets/img/x-icon">
+    html { scroll-behavior: smooth; }
+    body { padding-top:70px; }
+    .hero { background: url('assets/img/heroe.png') no-repeat center center/cover; color: white; height: 80vh; min-height:500px; display:flex; align-items:center; justify-content:center; text-align:center; }
+    .nav-link { position: relative; color: #222 !important; font-weight: 500; }
+    .nav-link.active { color: #00bcd4 !important; }
+    .nav-link.active::after { content: ""; position: absolute; width: 100%; height: 3px; bottom: -6px; left: 0; background-color: #00bcd4; border-radius:2px; }
+    .service-card { transition: transform 0.25s ease; cursor: pointer; }
+    .service-card:hover { transform: translateY(-6px); box-shadow:0 8px 24px rgba(0,0,0,0.08); }
+    .modal .carousel-item img { max-height: 520px; object-fit: cover; width:100%; border-radius:6px; }
+    @media (max-width:576px){ .hero h1{font-size:1.6rem} .hero p{font-size:1rem} }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navmenu" data-bs-offset="80" tabindex="0">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#hero">GeoSmart Solutions</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section id="hero" class="hero">
+    <div class="container">
+      <a href="#services" class="btn btn-info btn-lg mt-3">Explore Services</a>
+    </div>
+  </section>
+ <!-- About Section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Text Side -->
+      <div class="col-md-6">
+        <h2 class="text-primary">About GeoSmart Solutions</h2>
+        <p>
+          At GeoSmart Solutions, we harness the power of geospatial technologies to deliver
+          accurate, data-driven insights for smarter decision-making. Our services range
+          from GIS consulting and mapping to urban planning support and infrastructure studies,
+          helping governments, businesses, and communities achieve sustainable development.
+        </p>
+      </div>
+      <!-- Image Side -->
+      <div class="col-md-6 text-center">
+        <img src="assets/img/about.png" alt="About GeoSmart Solutions" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</section>
+  <section id="services" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Services</h2>
+      <div class="row g-4">
+        <div class="col-sm-6 col-md-3">
+          <div class="card service-card" data-bs-toggle="modal" data-bs-target="#service1Modal"><img src="assets/img/service1.png" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">GIS Consulting</h5></div></div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="card service-card" data-bs-toggle="modal" data-bs-target="#service2Modal"><img src="assets/img/service2.png" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Mapping & Spatial Analysis</h5></div></div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="card service-card" data-bs-toggle="modal" data-bs-target="#service3Modal"><img src="assets/img/service3.png" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Urban/Regional Planning Support</h5></div></div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="card service-card" data-bs-toggle="modal" data-bs-target="#service4Modal"><img src="assets/img/service4.png" class="card-img-top"><div class="card-body text-center"><h5 class="card-title">Infrastructure & Development Studies</h5></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Modals -->
+  <div class="modal fade" id="service1Modal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">GIS Consulting</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Expert GIS consulting to help organizations integrate spatial technologies and workflows.</p><div id="carousel1" class="carousel slide mb-3" data-bs-ride="carousel"><div class="carousel-inner"><div class="carousel-item active"><img src="assets/img/map1.jpg" class="d-block w-100" alt="map1"></div><div class="carousel-item"><img src="assets/img/map2.jpg" class="d-block w-100" alt="map2"></div></div><button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button></div></div></div></div></div>
+  <div class="modal fade" id="service2Modal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Mapping & Spatial Analysis</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>High-quality mapping and advanced spatial analysis for planning and development.</p><div id="carousel2" class="carousel slide mb-3" data-bs-ride="carousel"><div class="carousel-inner"><div class="carousel-item active"><img src="assets/img/analysis1.jpg" class="d-block w-100" alt="analysis1"></div><div class="carousel-item"><img src="assets/img/analysis2.jpg" class="d-block w-100" alt="analysis2"></div></div><button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button></div></div></div></div></div>
+  <div class="modal fade" id="service3Modal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Urban/Regional Planning Support</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>GIS-led planning support for zoning, SDFs, and sustainable urban development.</p><div id="carousel3" class="carousel slide mb-3" data-bs-ride="carousel"><div class="carousel-inner"><div class="carousel-item active"><img src="assets/img/plan1.jpg" class="d-block w-100" alt="plan1"></div><div class="carousel-item"><img src="assets/img/plan2.jpg" class="d-block w-100" alt="plan2"></div></div><button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button></div></div></div></div></div>
+  <div class="modal fade" id="service4Modal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Infrastructure & Development Studies</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Spatial data and studies for infrastructure planning, drainage, roads and utilities.</p><div id="carousel4" class="carousel slide mb-3" data-bs-ride="carousel"><div class="carousel-inner"><div class="carousel-item active"><img src="assets/img/infra1.jpg" class="d-block w-100" alt="infra1"></div><div class="carousel-item"><img src="assets/img/infra2.jpg" class="d-block w-100" alt="infra2"></div></div><button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" type="button" data-bs-target="#carousel4" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button></div></div></div></div></div>
+<!-- Contact Section -->
+<section id="contact" style="
+  background: linear-gradient(
+      rgba(0, 50, 100, 0.6), 
+      rgba(0, 50, 100, 0.6)
+    ),
+    url('assets/img/contacts.png') no-repeat center center/cover;
+  color: #fff;
+  padding: 80px 0;
+">
+  <div class="container text-center">
+    <h2>Contact Us</h2>
+    <p>Get in touch with GeoSmart Solutions. We'd love to hear from you.</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="mt-4">
+      <div class="mb-3">
+        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+      </div>
+      <div class="mb-3">
+        <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-light">Send Message</button>
+    </form>
+  </div>
+</section>
+<script>
+  const form = document.getElementById("contactForm");
+  const statusDiv = document.getElementById("formStatus");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        statusDiv.innerHTML = '<div class="alert alert-success">Thank you! Your message has been sent successfully.</div>';
+        form.reset();
+      } else {
+        statusDiv.innerHTML = '<div class="alert alert-danger">Oops! Something went wrong. Please try again.</div>';
+      }
+    } catch (error) {
+      statusDiv.innerHTML = '<div class="alert alert-danger">Network error. Please check your connection.</div>';
+    }
+  });
+</script>
+  <section id="contact" class="py-5 bg-white"><div class="container text-center"><h2>Contact</h2><p>Email: <a href="mailto:GeoSmartSolution1@gmail.com">GeoSmartSolution1@gmail.com</a></p><p>Phone: 0531661511 / 0504539367</p></div></section>
+  <footer class="bg-dark text-white text-center py-3"><p class="mb-0">&copy; 2025 GeoSmart Solutions. All Rights Reserved.</p></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
